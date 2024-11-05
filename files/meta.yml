@@ -1,0 +1,12 @@
+#cloud-config
+users:
+ - name: artem
+   groups: sudo
+   shell: /bin/bash
+   sudo: ['ALL=(ALL) NOPASSWD:ALL']
+   ssh-authorized-keys:
+      - "Ваш_ключ_ssh"
+runcmd:
+ - 'export PUBLIC_IPV4=$(curl ifconfig.me)'
+ - 'echo instance: $(hostname), IP Address: $PUBLIC_IPV4 > /var/www/html/index.html'
+ - 'echo https://murchin-03-11-2024.website.yandexcloud.net >> /var/www/html/index.html' 

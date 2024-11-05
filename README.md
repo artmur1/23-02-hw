@@ -39,6 +39,18 @@
 
 ## Решение 1. Yandex Cloud
 
+Код в Terraform:
+
+main.tf - https://github.com/artmur1/23-02-hw/blob/main/files/main.tf
+
+meta.yml - https://github.com/artmur1/23-02-hw/blob/main/files/meta.yml
+
+locals.tf - https://github.com/artmur1/23-02-hw/blob/main/files/locals.tf
+
+variables.tf - https://github.com/artmur1/23-02-hw/blob/main/files/variables.tf
+
+котёнок - https://github.com/artmur1/23-02-hw/blob/main/files/images/kitten1.jpg
+
 Создал бакет Object Storage и разместил в нём файл с картинкой:
 
     provider "yandex" {
